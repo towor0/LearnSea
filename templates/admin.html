@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+	<img class="small_logo" src="static/assets/logo.jpg">
+	<a href="{{ url_for('home') }}" class="logo">LearnSea</a>
+	<div class="header-right">
+	    <a href="{{ url_for('home') }}">Subjects</a>
+	    <a href="{{ url_for('tutor') }}">Tutoring</a>
+		<a href="{{ url_for('upload') }}">Contribute</a>
+		<a href="{{ url_for('logout')}}">Logout</a>
+	</div>
+</div>
+
+<form method="POST">
+	{{ user_form.hidden_tag() }}
+	<h1>Edit/Add User</h1>
+	{{ user_form.username.label }}
+	{{ user_form.username() }}
+	{{ user_form.password.label }}
+	{{ user_form.password() }}
+	{{ user_form.submit() }}
+</form>
+
+<form method="POST" enctype="multipart/form-data">
+	{{ subject_form.hidden_tag() }}
+	<h1>Edit/Add Subject</h1>
+	{{ subject_form.name.label }}
+	{{ subject_form.name() }}
+	{{ subject_form.description.label }}
+	{{ subject_form.description() }}
+	{{ subject_form.image.label }}
+	{{ subject_form.image()}}
+    <br><br>
+	{{ subject_form.submit() }}
+</form>
+
+{% endblock %}

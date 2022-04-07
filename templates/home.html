@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+	<img class="small_logo" src="static/assets/logo.jpg">
+	<a href="{{ url_for('home') }}" class="logo">LearnSea</a>
+	<div class="header-right">
+	    <a class="active" href="{{ url_for('home') }}">Subjects</a>
+	    <a href="{{ url_for('tutor') }}">Tutoring</a>
+		<a href="{{ url_for('upload') }}">Contribute</a>
+		<a href="{{ url_for('logout')}}">Logout</a>
+	</div>
+</div>
+
+{% for subject in subjects %}
+<div class="card">
+	<img src="static/assets/{{ subject.image }}" style="width:100%">
+	<h2>{{ subject.name.capitalize()}}</h2>
+	<p>{{ subject.description }}</p>
+	<a href="{{ url_for('subject', subjectName=subject.name) }}"><button>Learn {{ subject.name.capitalize()}}</button></a>
+</div>
+{% endfor %}
+  
+{% endblock %}

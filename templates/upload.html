@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+	<img class="small_logo" src="static/assets/logo.jpg">
+	<a href="{{ url_for('home') }}" class="logo">LearnSea</a>
+	<div class="header-right">
+	    <a href="{{ url_for('home') }}">Subjects</a>
+	    <a href="{{ url_for('tutor') }}">Tutoring</a>
+		<a class="active" href="{{ url_for('upload') }}">Contribute</a>
+		<a href="{{ url_for('logout')}}">Logout</a>
+	</div>
+</div>
+
+<form method="POST" enctype="multipart/form-data" class="container-two">
+	{{ video_form.hidden_tag() }}
+	<center><h1>Upload videos to contribute!</h1></center>
+	{{ video_form.title.label }}
+	{{ video_form.title() }}
+	{{ video_form.description.label }}
+	{{ video_form.description() }}
+    {{ video_form.video.label }}
+    <br>
+	{{ video_form.video }}
+	<br>
+	<br>
+    {{ video_form.material.label}}
+    <br>
+	{{ video_form.material }}
+	<br>
+	<br>
+	{{ video_form.subject.label }}
+	{{ video_form.subject(class="dropdown") }}
+	<br>
+	<br>
+    <center>{{ video_form.submit() }}</center>
+</form>
+{% endblock %}

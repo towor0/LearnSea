@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+	<img class="small_logo" src="{{ url_for('static', filename='assets/logo.jpg') }}">
+	<a href="{{ url_for('home') }}" class="logo">LearnSea</a>
+	<div class="header-right">
+	    <a href="{{ url_for('home') }}">Subjects</a>
+	    <a href="{{ url_for('tutor') }}">Tutoring</a>
+		<a href="{{ url_for('upload') }}">Contribute</a>
+		<a href="{{ url_for('logout')}}">Logout</a>
+	</div>
+</div>
+<center><h1> {{ user.username }}</h1></center>
+<center><h2> Join date: {{ user.joined_at_date.strftime("%B %d, %Y") }}</h2></center>
+
+<h2>Tutor Listings</h2>
+<table>
+	<tr>
+	    <th>Name</th>
+	    <th>Subject</th>
+	    <th>Contact</th>
+	    <th>Learn Link</th>
+	</tr>
+	{% for tutor in tutors %}
+	<tr>
+	    <td>{{tutor.name}}</td>
+	    <td>{{tutor.subject}}</td>
+	    <td>{{tutor.email}}</td>
+	    <td><a href="{{url_for('user', username=tutor.user.username)}}">Link</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% if videos %}
+<h2>Recent Contributation</h2>
+{% for video in videos %}
+<div class="card">
+  <h2>{{video.title}}</h2>
+  <p>{{video.description}}</p>
+  <video width="340" height="200" controls>
+    <source src="{{ url_for('static', filename='video/' + video.user.username + '.' + video.title + '.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p>  </p>
+  <a href="{{ url_for('static', filename='material/' + video.user.username + '.' + video.title + '.pdf') }}" download><button>Download LearnSlides</button></a>
+</div>
+{% endfor %}
+{% endif %}
+
+
+{% endblock %}

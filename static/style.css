@@ -1,0 +1,204 @@
+body {
+	margin: 0px;
+    font-family: Sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.background-img {
+  background-image: url("assets/polish-sea-baltic.jpg");
+  min-height: 940px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.container {
+  	position: absolute;
+  	margin-left: 42%;
+  	margin-top: 11%;
+  	max-width: 400px;
+ 	padding: 20px;
+	background-color: #f2f9fc;
+	border: 
+}
+
+.text-color {
+  color: #1E989E;
+}
+  
+input[type=text], input[type=password] {
+	box-sizing: border-box;
+  	width: 100%;
+  	padding: 15px;
+  	margin-top: 4px;
+  	margin-right: 0px;
+  	margin-bottom: 22px;
+  	margin-left: 0px;
+	border: none;
+  	background: #f1f1f1;
+}
+
+.container input[type=submit], .container-two input[type=submit] {
+	box-sizing: border-box;
+  	background-color: #1E989E;
+  	color: white;
+  	padding: 10px 100px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+	border: none;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 27px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 23px;
+  font-weight: bold;
+  color: #1E989E;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: #1E989E;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+.header-right a {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.video-search {
+    box-sizing: border-box;
+  border: none;
+    margin-top: 22px;
+    margin-right: 0px;
+  font-size: 20px;
+  max-width: 450px;
+  color: #1E989E;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  text-align: center;
+  float: left;
+  width: 33.3%;
+  margin: 10px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  margin-bottom: 0px;
+  padding: 12px;
+  color: white;
+  background-color: #1E989E;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.6;
+}
+
+.card p{
+  padding: 3px;
+}
+
+table {
+  padding: 3px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color: #bdd7e5;
+}
+
+.tutor-text {
+  font-size: 20px;
+}
+
+.container-two {
+  position: absolute;
+  margin-left: 37%;
+  margin-top: 0%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: white;
+  border: black;
+}
+
+.text-color-2 {
+  color: black;
+}
+
+.dropdown {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px;
+}
+
+.learnsea_logo {
+  width: 150px;
+}
+
+.small_logo {
+  width: 50px;
+  float: left;
+  margin-right: 8px;
+  margin-left: 5px;
+}
+
+.search {
+    box-sizing: border-box;
+  	background-color: #1E989E;
+    margin-top: 22px;
+    margin-left: 0px;
+    font-size: 20px;
+  	color: white;
+  	padding: 15px 60px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+	border: none;
+}

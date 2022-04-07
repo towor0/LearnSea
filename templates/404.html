@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="header">
+	<img class="small_logo" src="static/assets/logo.jpg">
+	<a href="{{ url_for('home') }}" class="logo">LearnSea</a>
+	<div class="header-right">
+	    <a href="{{ url_for('home') }}">Subjects</a>
+	    <a href="{{ url_for('tutor') }}">Tutoring</a>
+		<a href="{{ url_for('upload') }}">Contribute</a>
+		<a href="{{ url_for('logout')}}">Logout</a>
+	</div>
+</div>
+
+<center><h1> 404 Page Not Found</h1></center>
+<center><h3> Please double check the url and try again</h3></center>
+{% endblock %}

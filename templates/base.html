@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width">
+	    <title>Learnsea</title>
+	    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"/>
+        <link rel="icon" type="image/jpg" href="{{url_for('static', filename='assets/logo.jpg')}}" />
+	</head>
+<body>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

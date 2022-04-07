@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="background-img">
+    <form class="container" method="POST">
+		{{ form.hidden_tag() }}
+		<center><img class="learnsea_logo" src="static/assets/logo.jpg"></center>
+	    <center><h1 class="text-color">LearnSea Login</h1></center>
+	    <label for="uname" class="text-color"><em><b>Username</b></em></label>
+	    {{ form.username() }}
+	    <label for="pwd" class="text-color"'><em><b>Password</b></em></label>
+	    {{ form.password() }}
+	    <center>{{ form.submit() }}</center>
+	    <p>Don't have an account? <a href="{{ url_for('signup')}}">Sign Up!</a></p>
+    </form>
+</div>
+{% endblock %}
