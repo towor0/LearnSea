@@ -1,5 +1,5 @@
 # LearnSea
-Open Source Learning Application
+User generated learning platform
 
 # How to setup
 1. go to shell and open python (type "python" or "python3")
